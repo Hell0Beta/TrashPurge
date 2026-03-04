@@ -5,7 +5,7 @@ public class ModeDisplay : MonoBehaviour
 {
     public TextMeshProUGUI modeText;
 
-    void Start()
+    void Awake()
     {
         DimensionManager.Instance.OnGameModeChanged += UpdateDisplay;
 

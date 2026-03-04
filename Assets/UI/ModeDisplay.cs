@@ -15,7 +15,10 @@ public class ModeDisplay : MonoBehaviour
 
     void OnDisable()
     {
-        DimensionManager.Instance.OnGameModeChanged -= UpdateDisplay;
+        if (DimensionManager.Instance != null)
+        {
+            DimensionManager.Instance.OnGameModeChanged -= UpdateDisplay;
+        }
     }
 
     void UpdateDisplay(GameMode Mode)

@@ -23,6 +23,7 @@ public class DimensionManager : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("DimensionManager loaded");
         Instance = this;
     }
 
